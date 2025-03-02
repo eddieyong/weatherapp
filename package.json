@@ -1,5 +1,5 @@
 {
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4"
+  "dependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
