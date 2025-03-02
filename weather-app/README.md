@@ -77,12 +77,3 @@ or
 ```
 yarn build
 ```
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Weather data provided by [WeatherAPI.com](https://www.weatherapi.com/)
-- Icons from [Flaticon](https://www.flaticon.com/) 
