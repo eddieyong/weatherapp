@@ -1,0 +1,159 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+h1::before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('https://cdn-icons-png.flaticon.com/512/1779/1779940.png') no-repeat center center;
+  background-size: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.search-input {
+  flex: 1;
+  padding: 16px 24px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-weight: 500;
+}
+
+.search-input::placeholder {
+  color: #888;
+  font-weight: 400;
+}
+
+.search-button {
+  padding: 0 30px;
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: linear-gradient(135deg, #00b4ff 0%, #0063e6 100%);
+}
+
+.loading {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  margin: 30px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  animation: pulse 1.5s infinite;
+}
+
+.loading-dots {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+}
+
+.loading-dots::after {
+  content: '...';
+  position: absolute;
+  left: 0;
+  animation: loadingDots 1.5s infinite steps(4, end);
+  overflow: hidden;
+  width: 0;
+}
+
+@keyframes loadingDots {
+  0% { width: 0px; }
+  25% { width: 6px; }
+  50% { width: 12px; }
+  75% { width: 18px; }
+  100% { width: 24px; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.error {
+  color: white;
+  background: rgba(231, 76, 60, 0.8);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    padding: 14px 20px;
+  }
+  
+  .search-button {
+    padding: 0 20px;
+  }
+} 
