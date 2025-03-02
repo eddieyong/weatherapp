@@ -31,12 +31,12 @@ A modern, responsive weather application built with React and Vite that allows u
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/eddieyong/weatherapp.git
    ```
 
 2. Navigate to the project directory
    ```
-   cd weather-app
+   cd weatherapp
    ```
 
 3. Install dependencies
@@ -65,6 +65,8 @@ A modern, responsive weather application built with React and Vite that allows u
 6. Open your browser and navigate to `http://localhost:5173`
 
 ## Deployment
+
+The app is deployed at: https://eddieyong.github.io/weatherapp/
 
 To build the app for production:
 
